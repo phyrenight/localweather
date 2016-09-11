@@ -28,26 +28,30 @@ var getWeather = function(lng,lat){
 	});
 }
 var addBackground = function(condition){
+  var $body = $("body");
+  var imgURL = "";
+  console.log($body)
   if(condition == 'Rain'){
-    //http://onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg
+    imgURL = "http://onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg"
     console.log("rain")
   }
   else if(condition == 'Snow'){
-  	//http://feelgrafix.com/data_images/out/8/813293-free-snow-wallpaper.jpg
+  	imgURL = "http://feelgrafix.com/data_images/out/8/813293-free-snow-wallpaper.jpg"
     console.log("snow")
   }
   else if(condition == 'Clear'){
-  	//http://www.dundeewestfest.org/wp-content/uploads/2016/04/813639-free-sunny-day-wallpaper-1.jpg
+  	imgURL = "http://www.dundeewestfest.org/wp-content/uploads/2016/04/813639-free-sunny-day-wallpaper-1.jpg"
     console.log("Clear")
   }
   else if(condition == 'Clouds'){
-  	//http://www.rejijoseph.com/wp-content/uploads/2016/06/Free-stock-photo-of-Cloudy-Sky-Sea-Picture-00001.jpg
+  	imgURL = "http://www.rejijoseph.com/wp-content/uploads/2016/06/Free-stock-photo-of-Cloudy-Sky-Sea-Picture-00001.jpg"
     console.log("clouds")
   }
   else{
-  	//http://www.publicdomainpictures.net/pictures/70000/velka/stars-in-the-night-sky.jpg
+  	imgURL = "http://www.publicdomainpictures.net/pictures/70000/velka/stars-in-the-night-sky.jpg"
     console.log("everything else")
   }
+  $body.css('background-image', 'url('+imgURL+')');
 }
 
 var kelvinToCelsius = function(temp){
