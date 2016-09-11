@@ -3,21 +3,31 @@
   <head>
      <title>Local weather map</title>
      <meta charset='utf-8'>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+
      <script src="js/JQuery.js"></script>
      <script rel="text/javascript" src="js/app.js"></script>
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script rel="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
   <body onload="getWeather()">
-    <article>
-      <header>
-        <h1>Local weather</h1>
-        <button onclick="changeMetric()">C/F</button>
-      </header>
-      <section>
-        <div id="weather">
+    <article class="container">
+      <header class="row">
+        <h1 class="text-center jumbotron">Local weather</h1>
+      </header><br>
+      <div class="row">
+        <button onclick="changeMetric()"class="col-xs-2 col-xs-offset-5 col-sm-2 col-sm-offset-5 col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5">C/F</button>
+      </div>
+      <br>
+      <section class="row">
+        <div id="weather" class="col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3 col-md-2 col-md-offset-3 col-lg-2 col-lg-offset-3">
         </div>
-        <div id="temp">
+        <div id="temp" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         </div>
-        <div id="location">
+        <div id="location" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         </div>
       </section>
     </article>
