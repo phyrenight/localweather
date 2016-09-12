@@ -1,0 +1,9 @@
+#temp,#weather,#location {
+	background-color: #696969;
+}
+
+#temp, #location {
+	padding-bottom: 4%;
+	display:table-cell;
+	vertical-align: middle;
+}
