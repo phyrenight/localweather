@@ -1,4 +1,10 @@
+
+// Think about breaking this up into two functions one for the api and the other place items in the DOM
 var getWeather = function(locaCoords){
+  /*
+    args: an object containing the user's coordinates
+    function: displays the users current weather
+  */
   var temp = "";
   var $temp = $("#temp");
   var $weather = $("#weather");
@@ -25,6 +31,10 @@ var getWeather = function(locaCoords){
 };
 
 var addBackground = function(condition){
+  /*
+    args: a string
+    function: displays a background based off of the current weather
+  */
   var imgURL = "";
   if(condition == "Rain"){
     imgURL = "http://onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg";
@@ -45,10 +55,19 @@ var addBackground = function(condition){
 };
 
 var kelvinToCelsius = function(temp){
+  /*
+    args: string of numbers representing a temp in kelvin
+    function: converts kelvin to celsius
+    returns: a number representing a celsius temp
+  */
 	return (temp - 273.15).toFixed(2) + " C";
 };
 
 var changeMetric = function(){
+  /*
+    function: converts temps from celsius to fahrenheit and fahrenheit to celsius
+    returns: a string that contains the temp and the Degree letter 
+  */
   var temp = "";
   var tempContent = "";
 	var $temp = $("#temp");
@@ -67,6 +86,10 @@ var changeMetric = function(){
 };
 
 function getLocation() {
+  /*
+    function: makes an api call to freegeoip.net  to get the users coordinates
+    returns: an object with the users longitude and latitude
+  */
   var IPURL = "http://freegeoip.net/json/";
   $.getJSON(IPURL, function(result){
     var locaCoords = {
