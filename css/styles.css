@@ -1,4 +1,19 @@
-html, body{
+section {
+  border-radius: 3%;
+  width: 25%;
+  margin: auto;
+  background: rgba(69, 69, 69, 0.3);
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#weather, #temp, #location, button {
+  text-align: center;
+}
+
+
+/*html, body{
+  padding:0%;
   height:100%;
 }
 header{
@@ -6,12 +21,13 @@ header{
   text-align:center;
 }
 article{
+  padding: 0%;
 	border-radius: 3%;
   padding-bottom:4%;
   height: 100%;
 }
 button{
-  margin-left:45%;
+  text-align: center;
 }
 section{
   margin-left: 35%;
@@ -22,9 +38,9 @@ section{
 }
 
 #temp, #weather, #location {
-  position:relative;
-  margin-left:42%;
-	padding-bottom: 4%;
+  /*position:relative;
+  text-align: center;
+	padding: 4% 0%;
 	display:block;
 	vertical-align: middle;
-}
+}*/

@@ -51,7 +51,7 @@ var addBackground = function(condition){
   else{
   	imgURL = "http://www.publicdomainpictures.net/pictures/70000/velka/stars-in-the-night-sky.jpg";
   }
-  $("#article").css("background-image", "url(" + imgURL + ")");
+  $("#body").css("background-image", "url(" + imgURL + ")");
 };
 
 var kelvinToCelsius = function(temp){
